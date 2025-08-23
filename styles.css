@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  font-family: "Quicksand", sans-serif;
+}
+
+/* Fundo respirando */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(
+    circle at center,
+    #FCBBA1 0%,
+    #FDB5AF 10%,
+    #FCABCB 30%,
+    #EFB8D5 50%,
+    #C4E1EF 60%,
+    transparent 100%
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 120% 120%;
+  animation: breathe 10s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% { background-size: 120% 120%; }
+  50%      { background-size: 150% 150%; }
+}
+
+/* Card central */
+#content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.profile-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  display: inline-block;
+  max-width: 320px;
+}
+
+/* Foto */
+#fotoBe {
+  background-image: url(assets/photos/be3.jpg);
+  height: 180px;
+  width: 180px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin: 0 auto 15px auto;
+}
+
+/* Nome */
+.name {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 20px 0 20px 0;
+  letter-spacing: 1px;
+  font-family: "Corinthia";
+}
+
+/* Tagline */
+.tagline {
+  font-size: 0.95rem;
+  color: #f0f0f0;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  font-family: "Comfortaa";
+}
+
+/* Follow */
+h1 {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 20px 0 20px 0;
+  letter-spacing: 1px;
+  font-family: "Quicksand";
+}
+
+/* Botões */
+.buttonSocial {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* gap: 15px; */
+  border-radius: 50px;
+  width: 230px;
+  height: 45px;
+  background-color: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 0 auto 18px auto;
+  /* padding-left: 30px; */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  padding: 0;
+}
+
+.buttonSocial img {
+  position: absolute;
+  left: 20px;
+  height: 22px;
+  width: 22px;
+}
+
+.buttonSocial p {
+  font-family: "Comfortaa";
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+/* Hover animado */
+.buttonSocial:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
