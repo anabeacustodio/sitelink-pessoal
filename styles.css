@@ -24,7 +24,7 @@ body::before {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 120% 120%;
-  animation: breathe 10s ease-in-out infinite;
+  animation: breathe 8s ease-in-out infinite;
 }
 
 @keyframes breathe {
